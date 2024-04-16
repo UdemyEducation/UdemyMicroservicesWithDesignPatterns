@@ -26,8 +26,7 @@ namespace SagaStateMachineWorkerService
                 {
                     services.AddMassTransit(cfg =>
                     {
-                     
-
+                        
                         cfg.AddSagaStateMachine<OrderStateMachine, OrderStateInstance>().EntityFrameworkRepository(opt =>
                         {
                             opt.AddDbContext<DbContext, OrderStateDbContext>((provider, builder) =>
@@ -43,10 +42,17 @@ namespace SagaStateMachineWorkerService
                          {
                              configure.Host(hostContext.Configuration.GetConnectionString("RabbitMQ"));
 
+
+                             configure.UseMessageRetry(x=>x.Immediate(4));
+
+
                              configure.ReceiveEndpoint(RabbitMQSettingsConst.OrderSaga, e =>
                              {
                                  e.ConfigureSaga<OrderStateInstance>(provider);
                              });
+
+
+                          
                          }));
                     });
                    // services.AddMassTransitHostedService();

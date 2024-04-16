@@ -35,7 +35,8 @@ namespace SagaStateMachineWorkerService.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CardName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
 
                     b.Property<string>("CardNumber")
                         .HasColumnType("nvarchar(max)");

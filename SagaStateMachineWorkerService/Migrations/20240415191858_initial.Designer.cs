@@ -12,7 +12,7 @@ using SagaStateMachineWorkerService.Models;
 namespace SagaStateMachineWorkerService.Migrations
 {
     [DbContext(typeof(OrderStateDbContext))]
-    [Migration("20231212160644_initial")]
+    [Migration("20240415191858_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -37,7 +37,8 @@ namespace SagaStateMachineWorkerService.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CardName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
 
                     b.Property<string>("CardNumber")
                         .HasColumnType("nvarchar(max)");

@@ -17,7 +17,7 @@ namespace SagaStateMachineWorkerService.Migrations
                     CurrentState = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     BuyerId = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     OrderId = table.Column<int>(type: "int", nullable: false),
-                    CardName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CardName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     CardNumber = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Expiration = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CVV = table.Column<string>(type: "nvarchar(max)", nullable: true),

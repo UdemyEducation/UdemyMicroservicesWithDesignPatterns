@@ -18,7 +18,8 @@ namespace Stock.API.Consumers
         private readonly ISendEndpointProvider _sendEndpointProvider;
         private readonly IPublishEndpoint _publishEndpoint;
 
-        public OrderCreatedEventConsumer(AppDbContext context, ILogger<OrderCreatedEventConsumer> logger, ISendEndpointProvider sendEndpointProvider, IPublishEndpoint publishEndpoint)
+        public OrderCreatedEventConsumer(AppDbContext context, ILogger<OrderCreatedEventConsumer> logger,
+            ISendEndpointProvider sendEndpointProvider, IPublishEndpoint publishEndpoint)
         {
             _context = context;
             _logger = logger;
@@ -32,7 +33,8 @@ namespace Stock.API.Consumers
 
             foreach (var item in context.Message.OrderItems)
             {
-                stockResult.Add(await _context.Stocks.AnyAsync(x => x.ProductId == item.ProductId && x.Count > item.Count));
+                stockResult.Add(
+                    await _context.Stocks.AnyAsync(x => x.ProductId == item.ProductId && x.Count > item.Count));
             }
 
             if (stockResult.All(x => x.Equals(true)))
