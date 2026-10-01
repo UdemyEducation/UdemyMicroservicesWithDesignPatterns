@@ -17,6 +17,7 @@ namespace Stock.API
         {
             var host = CreateHostBuilder(args).Build();
 
+
             using (var scope = host.Services.CreateScope())
             {
                 var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
@@ -31,6 +32,7 @@ namespace Stock.API
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
+                .AddServiceDefaults()
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();

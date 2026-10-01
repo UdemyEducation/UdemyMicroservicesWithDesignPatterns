@@ -22,6 +22,7 @@ namespace SagaStateMachineWorkerService
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
+                .AddServiceDefaults()
                 .ConfigureServices((hostContext, services) =>
                 {
                     services.AddMassTransit(cfg =>

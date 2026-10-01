@@ -85,6 +85,7 @@ namespace Stock.API
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapDefaultEndpoints(env.IsDevelopment());
             });
         }
     }

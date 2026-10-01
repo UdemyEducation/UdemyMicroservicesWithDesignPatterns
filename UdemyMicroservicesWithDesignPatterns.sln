@@ -13,6 +13,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "Shared\Shared.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SagaStateMachineWorkerService", "SagaStateMachineWorkerService\SagaStateMachineWorkerService.csproj", "{8EB8C794-A014-43DE-8615-1F23F4420ECD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UdemyMicroservicesWithDesignPatterns.AppHost", "UdemyMicroservicesWithDesignPatterns.AppHost\UdemyMicroservicesWithDesignPatterns.AppHost.csproj", "{D366D4E7-A4B5-4C88-8F08-D079DF5AD0F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UdemyMicroservicesWithDesignPatterns.ServiceDefaults", "UdemyMicroservicesWithDesignPatterns.ServiceDefaults\UdemyMicroservicesWithDesignPatterns.ServiceDefaults.csproj", "{7001C344-1CDB-4D89-9006-13F20599A071}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{8EB8C794-A014-43DE-8615-1F23F4420ECD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8EB8C794-A014-43DE-8615-1F23F4420ECD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8EB8C794-A014-43DE-8615-1F23F4420ECD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D366D4E7-A4B5-4C88-8F08-D079DF5AD0F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D366D4E7-A4B5-4C88-8F08-D079DF5AD0F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D366D4E7-A4B5-4C88-8F08-D079DF5AD0F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D366D4E7-A4B5-4C88-8F08-D079DF5AD0F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7001C344-1CDB-4D89-9006-13F20599A071}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7001C344-1CDB-4D89-9006-13F20599A071}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7001C344-1CDB-4D89-9006-13F20599A071}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7001C344-1CDB-4D89-9006-13F20599A071}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
